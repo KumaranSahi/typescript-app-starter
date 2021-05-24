@@ -9,14 +9,18 @@ const webpackConfig = {
   output: {
     filename: "[name].bundle.js",
     path: build,
-    clean:true
+    clean: true,
   },
   mode: "development",
-  plugins:[
-      new htmlWebpackPlugin({
-          template: path.resolve(__dirname,"src","index.html")
-      })
-  ]
+  plugins: [
+    new htmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
+  ],
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+  },
 };
 
 module.exports = webpackConfig;
