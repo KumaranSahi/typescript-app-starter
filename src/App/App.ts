@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import image from "../Assets/TypescriptLogo.png";
 import { ceil } from "lodash";
 
