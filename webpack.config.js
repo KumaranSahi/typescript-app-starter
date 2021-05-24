@@ -8,7 +8,7 @@ const webpackConfig = {
   entry: source,
   devtool: "inline-source-map",
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].bundle.js",
     path: build,
     clean: true,
   },
@@ -41,6 +41,18 @@ const webpackConfig = {
       template: path.resolve(__dirname, "src", "index.html"),
     }),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        node_vendors: {
+          name: "vendor",
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 1,
+        },
+      },
+    },
+  },
   devServer: {
     contentBase: "./build",
   },
