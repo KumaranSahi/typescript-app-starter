@@ -1,5 +1,9 @@
+import {App} from './App/App'
+
+
 const root=document.getElementById("root")
 
 root.innerHTML=`
-    TS now baby!
+    This is rendered by Index
+    ${App()}
 `
