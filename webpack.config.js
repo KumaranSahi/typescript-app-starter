@@ -41,6 +41,9 @@ const webpackConfig = {
       template: path.resolve(__dirname, "src", "index.html"),
     }),
   ],
+  devServer: {
+    contentBase: "./build",
+  },
 };
 
 module.exports = webpackConfig;
