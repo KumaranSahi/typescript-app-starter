@@ -14,6 +14,7 @@
   "author": "Kumaran",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.170",
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
@@ -23,5 +24,6 @@
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "dependencies": {}
 }
